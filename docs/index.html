@@ -92,8 +92,8 @@
                     return callback(new Error('DestVersion must not null'));
                 }
                 setTimeout(() => {
-                    if (!/^(\d\.){3}(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])$/.test(value)) {
-                        callback(new Error('Please input the format like a.b.c.d (0<=a,b,c<=9, 0<=d<=255; eg: 3.5.0.46)'));
+                    if (!/^((\d|\d\d)\.){3}(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])$/.test(value)) {
+                        callback(new Error('Please input the format like a.b.c.d (0<=a,b,c<=99, 0<=d<=255; eg: 3.5.0.46)'));
                     } else {
                         callback();
                     }
